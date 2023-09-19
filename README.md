@@ -38,24 +38,22 @@
 
 **Blog App** is an application that allows different users to log in, make posts, and comment and like other posts.
 
-These classes where made following this UML diagram:
-![image](./catalog_of_my_things.png) 
+The information is saved in a PostgreSQL database with these tables:
+![image](./app/assets/images/blog_app_erd_v1_1.png) 
 
 ## 🛠 Built With <a id="built-with"></a>
 
 ### Tech Stack
 
-* Ruby.
+* Ruby on Rails.
 * PostgreSQL.
 
 <!-- Features -->
 
 ### Key Features
-* Design classes following a UML diagram.
-* Save and retrieve data from JSON files.
-* Associations between classes.
-* Represent the classes into SQL tables.
-* Interactive UI.
+* Use of Rails framework.
+* MVC architecture.
+* Save and retrieve information from a PostgreSQL database.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,7 +65,7 @@ These classes where made following this UML diagram:
 ### Prerequisites
 In order to run this project you need to have:
 
-- Installed Ruby.
+- Installed Ruby and Rails.
 - If you're using Windows, have installed WSL.
 - If you're using MacOS, an option is using UTM.
 
@@ -75,23 +73,7 @@ In order to run this project you need to have:
 To clone this repository to your desired folder, run the following command: <br>
 
 ```
-git clone git@github.com:Ruthmy/catalog-my-things.git
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Usage
-Initialize it with
-```
-ruby main.rb
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Test
-To run the tests try the following command:
-```
-rspec spec
+git clone git@github.com:Luffytaro22/Blog-App.git
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -99,17 +81,6 @@ rspec spec
 <!-- AUTHORS -->
 
 ## 👥 Authors <a id="authors"></a>
-
-👤 **Ruth Abreu**
-
-- GitHub: [@Ruthmy](https://github.com/Ruthmy)
-- Twitter [@rury_exe](https://twitter.com/rury_exe)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/ruth-abreu)
-
-👤 **Alexandre Sales Medina Ferreira**
-
-- GitHub: [@alexmedinasf](https://github.com/alexmedinasf)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/alexmedinasf)
 
 👤 **Manuel Sánchez**
 
@@ -122,8 +93,8 @@ rspec spec
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a id="future-features"></a>
-* Save the information in a PostgreSQL database.
-* Let the user to remove and modify the information.
+* Interactive UI.
+* Let the user Log in, make posts, comments and likes.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
