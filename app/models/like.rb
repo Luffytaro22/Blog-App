@@ -2,13 +2,14 @@ class Like < ApplicationRecord
   belongs_to :user, class_name: 'User'
   belongs_to :post, class_name: 'Post'
 
-  def initialize
+  def initialize(*args)
+  	super(*args)
     update_likes_counter
    end
 
   # Method to update the likes counter for a post.
   def update_likes_counter
-   	post = Post.find_by(id: :post)
+   	post = Post.find_by(id: post_id)
     if post.likes_counter.nil?
        counter = 1
     else
