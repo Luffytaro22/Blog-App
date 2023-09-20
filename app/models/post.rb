@@ -3,13 +3,14 @@ class Post < ApplicationRecord
 	has_many :likes
   belongs_to :author, class_name: "User"
 
-  def initialize
-		update_posts
+  def initialize(*args)
+  	super(*args)
+		update_posts if args.any? # Executes the method only if an argument is provided.
   end
 
   # Method to update the posts_counter for a user.
   def update_posts
-  	user = User.find_by(id: :author)
+  	user = User.find_by(id: author_id)
   	if user.posts_counter.nil?
   		counter = 1
   	else
