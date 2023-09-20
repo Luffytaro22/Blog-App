@@ -17,4 +17,12 @@ class Post < ApplicationRecord
   	end
   	user.update(posts_counter: counter)
   end
+
+  # Method to return the 5 most recent comments for a post.
+  def recent_comments(post_id)
+  	Comment
+  		.where(post_id: post_id)
+  		.order(updated_at: :desc)
+  		.limit(5)
+  end
 end
