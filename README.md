@@ -75,7 +75,6 @@ git clone git@github.com:Luffytaro22/Blog-App.git
 To install all the ruby gems, use the following command:
 ```
 bundle install
-npm install
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
