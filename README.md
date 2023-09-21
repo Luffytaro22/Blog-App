@@ -71,6 +71,22 @@ git clone git@github.com:Luffytaro22/Blog-App.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Install
+To install all the ruby gems, use the following command:
+```
+bundle install
+npm install
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Run tests
+To run the RSpec unit tests, use the following command:
+```
+rspec
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a id="authors"></a>
@@ -86,8 +102,8 @@ git clone git@github.com:Luffytaro22/Blog-App.git
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a id="future-features"></a>
-* Interactive UI.
-* Let the user Log in, make posts, comments and likes.
+- [ ] **Interactive UI.**
+- [ ] **Let the user Log in, make posts, comments and likes.**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
