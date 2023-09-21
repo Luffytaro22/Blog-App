@@ -2,10 +2,17 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
   belongs_to :author, class_name: 'User'
+  after_initialize :set_defaults
   after_save :update_posts
   validates :title, presence: true, length: { maximum: 250 }
   validates :comments_counter, comparison: { greater_than_or_equal_to: 0 }, numericality: { only_integer: true }
   validates :likes_counter, comparison: { greater_than_or_equal_to: 0 }, numericality: { only_integer: true }
+
+  # Initialize counter to zero if they are nil.
+  def set_defaults
+    self.comments_counter ||= 0
+    self.likes_counter ||= 0
+  end
 
   # Method to update the posts_counter for a user.
   def update_posts
