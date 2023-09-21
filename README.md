@@ -71,6 +71,22 @@ git clone git@github.com:Luffytaro22/Blog-App.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Install
+To install all the ruby gems, use the following command:
+```
+bundle install
+npm install
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Run tests
+To run the RSpec unit tests, use the following command:
+```
+rspec
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a id="authors"></a>
@@ -78,7 +94,7 @@ git clone git@github.com:Luffytaro22/Blog-App.git
 👤 **Manuel Sánchez**
 
 - GitHub: [@Luffytaro22](https://github.com/Luffytaro22)
-- LinkedIn: [Manuel Sánchez](https://www.linkedin.com/in/manuel-alejandro-sanchez-sierra-4b358b14a/)
+- LinkedIn: [Manuel Sánchez](https://www.linkedin.com/in/manuel-alejandro-sanchez-sierra/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,8 +102,8 @@ git clone git@github.com:Luffytaro22/Blog-App.git
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a id="future-features"></a>
-* Interactive UI.
-* Let the user Log in, make posts, comments and likes.
+- [ ] **Interactive UI.**
+- [ ] **Let the user Log in, make posts, comments and likes.**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -96,7 +112,7 @@ git clone git@github.com:Luffytaro22/Blog-App.git
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](../../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
