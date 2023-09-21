@@ -3,6 +3,9 @@ class Post < ApplicationRecord
   has_many :likes
   belongs_to :author, class_name: 'User'
   after_save :update_posts
+  validations :title, presence: true, length: { maximum: 250 }
+  validates :comments_counter, comparison: { greater_than_or_equal_to: 0 }
+  validates :likes_counter, comparison: { greater_than_or_equal_to: 0 }
 
   # Method to update the posts_counter for a user.
   def update_posts
