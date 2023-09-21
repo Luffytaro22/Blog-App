@@ -94,7 +94,7 @@ rspec
 👤 **Manuel Sánchez**
 
 - GitHub: [@Luffytaro22](https://github.com/Luffytaro22)
-- LinkedIn: [Manuel Sánchez](https://www.linkedin.com/in/manuel-alejandro-sanchez-sierra-4b358b14a/)
+- LinkedIn: [Manuel Sánchez](https://www.linkedin.com/in/manuel-alejandro-sanchez-sierra/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,7 +112,7 @@ rspec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](../../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
