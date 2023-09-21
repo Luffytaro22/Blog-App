@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-	user = User.new(name: 'John', photo: 'www.google.com', bio: 'Hello world...')
-	post = Post.new(author: user, title: 'Hello World!', text: 'This is my first post about....')
+	let(:user) { User.new(name: 'John', photo: 'www.google.com', bio: 'Hello world...') }
+	let(:post) { Post.new(author: user, title: 'Hello World!', text: 'This is my first post about....') }
 
 	context 'Adding a new Post without saving it' do
 		it 'Title should be present' do
@@ -36,4 +36,22 @@ RSpec.describe Post, type: :model do
 			expect(post.recent_comments).to be_empty
 		end
 	end
+
+	context 'Updating the user posts count after saving the post' do
+		before do
+          user.save
+          post.save
+        end
+
+  	it 'The number of posts should be 1' do
+  		user.reload
+  		expect(user.posts_counter).to eq(1)
+  	end
+
+  	after do
+      user.reload
+      post.destroy
+      user.destroy
+    end
+  end
 end
