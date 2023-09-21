@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :posts_counter, comparison: { greater_than_or_equal_to: 0 }, numericality: { only_integer: true }
   after_initialize :set_defaults
 
-	# Initialize the posts_counter to zero if it's nil.
+  # Initialize the posts_counter to zero if it's nil.
   def set_defaults
     self.posts_counter ||= 0
   end
