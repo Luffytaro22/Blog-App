@@ -1,10 +1,14 @@
 .users-container {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
 .users-photos {
   width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .users,
@@ -13,8 +17,14 @@
   justify-content: space-between;
 }
 
+.users {
+  width: 700px;
+}
+
 .user-container {
   border: 1px solid black;
+  width: 70%;
+  padding: 0 30px;
 }
 
 .user-container > p {
