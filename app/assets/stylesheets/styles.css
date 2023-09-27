@@ -1,0 +1,22 @@
+.users-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.users-photos {
+  width: 100px;
+}
+
+.users,
+.user-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-container {
+  border: 1px solid black;
+}
+
+.user-container > p {
+  align-self: end;
+}
