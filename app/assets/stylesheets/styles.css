@@ -48,7 +48,9 @@
 
 .user-bio,
 .posts,
-.posts-comments {
+.posts-comments,
+.post,
+.comments {
   border: 1px solid black;
   padding: 5px 10px 10px 10px;
   width: 680px;
@@ -60,11 +62,17 @@
   font-weight: bold;
 }
 
-.posts > p:last-child {
+.posts > p:last-child,
+.post-title > p {
   text-align: end;
 }
 
-.posts-comments > p {
+.post-title {
+  margin-bottom: 20px;
+}
+
+.posts-comments > p,
+.comments > p {
   margin-bottom: 10px;
 }
 
