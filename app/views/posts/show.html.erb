@@ -1,5 +1,7 @@
 <div class="posts-container">
-	<i class="fa-solid fa-arrow-left"></i><%= button_to 'Back to User', user_posts_path(@user_select), method: :get, class: 'button-posts' %>
+	<%= link_to user_posts_path(@user_select), method: :get, class: 'button-posts' do %>
+    <i class="fas fa-arrow-left"></i> Back to User
+  <% end %>
 	<div>
 		<div class="post">
 			<div class="post-title">
