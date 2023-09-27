@@ -1,14 +1,29 @@
-.users-container {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.users-container,
+.posts-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  margin-top: 50px;
 }
 
 .users-photos {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+
+.users-container {
+  margin-bottom: 30px;
+}
+
+.posts-container {
+  margin-top: 10px;
 }
 
 .users,
@@ -24,9 +39,36 @@
 .user-container {
   border: 1px solid black;
   width: 70%;
-  padding: 0 30px;
+  padding: 10px 30px;
 }
 
 .user-container > p {
   align-self: end;
+}
+
+.user-bio,
+.posts{
+  border: 1px solid black;
+  padding: 5px 10px 10px 10px;
+  width: 680px;
+}
+
+.user-bio > p,
+.posts > p:first-child {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.posts > p:last-child {
+  text-align: end;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.button-posts {
+  padding: 10px 20px;
+  background-color: orange;
+  color: black;
 }
