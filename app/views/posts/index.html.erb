@@ -1,27 +1,33 @@
-<div class="users">
-	<img src="<%= @user_select.photo %>" class="users-photos" />
-	<h2 class="users-name"><%= @user_select.name %></h2>
-	<p class="users-posts-counter">Number of posts: <%= @user_select.posts_counter %></p>
-</div>
-<div class="posts-container">
-	<% @user_select.recent_posts.each do |post| %>
-		<div class="posts">
-			<p><%= post.title %></p>
-			<p><%= post.text.truncate(50) %></p>
-			<p>
-				<span>Comments: <%= post.comments_counter %></span>
-				<span>Likes: <%= post.likes_counter %>
-				</span>
-			</p>
+<div class="users-container">
+	<div class="users">
+		<img src="<%= @user_select.photo %>" class="users-photos" />
+		<div class="user-container">
+			<h2 class="users-name"><%= @user_select.name %></h2>
+			<p class="users-posts-counter">Number of posts: <%= @user_select.posts_counter %></p>
 		</div>
-		<div class="posts-comments">
-			<% post.recent_comments.each do |comment| %>
-				<p>
-					<strong><%= User.find(comment.user_id).name %>:</strong>
-					<span> <%= comment.text %> </span>
-				</p>
-			<% end %>
-		</div>
-	<% end %>
+	</div>
+	<div class="posts-container">
+		<% @user_select.recent_posts.each do |post| %>
+			<div class="post-comments">
+				<div class="posts">
+					<p><%= post.title %></p>
+					<p><%= post.text.truncate(50) %></p>
+					<p>
+						<span>Comments: <%= post.comments_counter %></span>
+						<span>Likes: <%= post.likes_counter %>
+						</span>
+					</p>
+				</div>
+				<div class="posts-comments">
+					<% post.recent_comments.each do |comment| %>
+						<p>
+							<strong><%= User.find(comment.user_id).name %>:</strong>
+							<span> <%= comment.text %> </span>
+						</p>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<%= button_to 'Pagination', "posts/1", method: :get, class: 'button-posts' %>
 </div>
-<%= button_to 'Pagination', "posts/1", method: :get, class: 'button-posts' %>
