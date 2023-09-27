@@ -85,3 +85,9 @@ button:hover {
   background-color: orange;
   color: black;
 }
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+}
