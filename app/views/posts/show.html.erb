@@ -21,5 +21,12 @@
 			<% end %>
 		</div>
 	</div>
-<%= button_to 'Next Post', "#{@id.to_i + 1}", method: :get, class: 'button-posts' %>
+	<div class="buttons-container">
+		<% unless @id.to_i == 1 %>
+      <%= button_to 'Previous Post', "#{@id.to_i - 1}", method: :get, class: 'button-posts' %>
+    <% end %>
+    <% unless @id.to_i >= @posts.count %>
+      <%= button_to 'Next Post', "#{@id.to_i + 1}", method: :get, class: 'button-posts' %>
+    <% end %>
+	</div>
 </div>
