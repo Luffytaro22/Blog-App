@@ -20,4 +20,4 @@
 		</div>
 	<% end %>
 </div>
-<button type="button" class="button-posts">See all posts</button>
+<%= button_to 'See all posts', "#{@user_select.id}/posts", method: :get, class: 'button-posts' %>
