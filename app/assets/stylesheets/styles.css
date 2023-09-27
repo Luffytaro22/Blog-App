@@ -47,7 +47,8 @@
 }
 
 .user-bio,
-.posts{
+.posts,
+.posts-comments {
   border: 1px solid black;
   padding: 5px 10px 10px 10px;
   width: 680px;
@@ -61,6 +62,10 @@
 
 .posts > p:last-child {
   text-align: end;
+}
+
+.posts-comments > p {
+  margin-bottom: 10px;
 }
 
 button:hover {
