@@ -1,23 +1,27 @@
-<div class="users">
-	<img src="<%= @user_select.photo %>" class="users-photos" />
-	<h2 class="users-name"><%= @user_select.name %></h2>
-	<p class="users-posts-counter">Number of posts: <%= @user_select.posts_counter %></p>
-</div>
-<div class="user-bio">
-	<p>Bio:</p>
-	<%= @user_select.bio %>
-</div>
-<div class="posts-container">
-	<% @user_select.recent_posts.each do |post| %>
-		<div class="posts">
-			<p><%= post.title %></p>
-			<p><%= post.text.truncate(50) %></p>
-			<p>
-				<span>Comments: <%= post.comments_counter %></span>
-				<span>Likes: <%= post.likes_counter %>
-				</span>
-			</p>
+<div class="users-container">
+	<div class="users">
+		<img src="<%= @user_select.photo %>" class="users-photos" />
+		<div class="user-container">
+			<h2 class="users-name"><%= @user_select.name %></h2>
+			<p class="users-posts-counter">Number of posts: <%= @user_select.posts_counter %></p>
 		</div>
-	<% end %>
+	</div>
+	<div class="user-bio">
+		<p>Bio:</p>
+		<%= @user_select.bio %>
+	</div>
+	<div class="posts-container">
+		<% @user_select.recent_posts.each do |post| %>
+			<div class="posts">
+				<p><%= post.title %></p>
+				<p><%= post.text.truncate(50) %></p>
+				<p>
+					<span>Comments: <%= post.comments_counter %></span>
+					<span>Likes: <%= post.likes_counter %>
+					</span>
+				</p>
+			</div>
+		<% end %>
+	</div>
+	<%= button_to 'See all posts', "#{@user_select.id}/posts", method: :get, class: 'button-posts' %>
 </div>
-<%= button_to 'See all posts', "#{@user_select.id}/posts", method: :get, class: 'button-posts' %>
