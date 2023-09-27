@@ -1,1 +1,22 @@
-<h1>Here is a specific post for a specific user</h1>
+<div class="post-container">
+	<div class="post">
+		<span class="post-title">
+			<h3><%= @post.title %> by <%= User.find(@post.author_id).name %> </h3>
+			<p>
+				<span>Comments: <%= @post.comments_counter %></span>
+				<span>Likes: <%= @post.likes_counter %></span>
+			</p>
+		</span>
+		<p>
+			<%= @post.text %>
+		</p>
+	</div>
+	<div class="comments">
+		<% @comments.each do |comment| %>
+			<p>
+				<strong><%= User.find(comment.user_id).name %>:</strong>
+				<span><%= comment.text %></span>
+			</p>
+		<% end %>
+	</div>
+</div>
