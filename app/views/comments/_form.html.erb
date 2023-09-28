@@ -1,0 +1,4 @@
+<%= bootstrap_form_with model: [@user, @post, @comment] do |form| %>
+	<%= form.text_area :text, size: "30x3" %>
+	<%= form.submit %>
+<% end %>
