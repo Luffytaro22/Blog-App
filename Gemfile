@@ -71,4 +71,5 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'font-awesome-sass', '~> 6.4.2'
 gem 'rubocop', '>= 1.0', '< 2.0'

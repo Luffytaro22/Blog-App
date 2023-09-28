@@ -1,0 +1,103 @@
+@import "font-awesome";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.users-name {
+  color: black;
+}
+
+.users-container,
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.users-photos {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.users-container {
+  margin-bottom: 30px;
+}
+
+.posts-container {
+  margin-top: 10px;
+}
+
+.users,
+.user-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.users {
+  width: 700px;
+}
+
+.user-container {
+  border: 1px solid black;
+  width: 70%;
+  padding: 10px 30px;
+}
+
+.user-container > p {
+  align-self: end;
+}
+
+.user-bio,
+.posts,
+.posts-comments,
+.post,
+.comments {
+  border: 1px solid black;
+  padding: 5px 10px 10px 10px;
+  width: 680px;
+}
+
+.post-title > p {
+  text-align: end;
+}
+
+.posts-comments > p,
+.comments > p {
+  margin-bottom: 10px;
+}
+
+.user-bio > p,
+.posts > p:first-child {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.posts > p:last-child {
+  text-align: end;
+}
+
+.post-title {
+  margin-bottom: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.button-posts {
+  padding: 10px 30px;
+  background-color: orange;
+  color: black;
+  text-decoration: none;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+}
