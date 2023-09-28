@@ -33,7 +33,6 @@ class PostsController < ApplicationController
   def edit
   	@user = current_user
   	@post = Post.find_by(author: @user, id: params[:id])
-  	print @post
   end
 
   def update
