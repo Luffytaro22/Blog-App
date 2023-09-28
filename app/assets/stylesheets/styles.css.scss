@@ -16,9 +16,14 @@ a {
   color: beige;
 }
 
-#posts-title {
+#posts-title,
+#posts-bar {
   display: flex;
   justify-content: space-between;
+}
+
+#posts-bar {
+  width: 700px;
 }
 
 .users-name {
