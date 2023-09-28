@@ -13,7 +13,7 @@
 		<% @posts.each do |post| %>
 			<div class="post-comments">
 				<div class="posts">
-					<p>
+					<p id="posts-title">
 						<%= post.title %>
 						<% if @user_select.id == @user.id %>
               <%= link_to edit_user_post_path(id: post.id, user_id: post.author_id), method: :get, class: 'button-posts' do %>
