@@ -47,7 +47,7 @@
 			</div>
 		<% end %>
 	</div>
-	<%= link_to user_post_path(@user_select, 1), method: :get, class: 'button-posts' do %>
+	<%= link_to user_post_path(@user_select, @posts[0]), method: :get, class: 'button-posts' do %>
 		Pagination
 	<% end %>
 </div>
