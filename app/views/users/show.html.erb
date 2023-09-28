@@ -26,5 +26,7 @@
 			</div>
 		<% end %>
 	</div>
-	<%= button_to 'See all posts', "#{@user_select.id}/posts", method: :get, class: 'button-posts' %>
+	<%= link_to user_posts_path(@user_select), method: :get, class: 'button-posts' do %>
+		See all posts
+	<% end %>
 </div>
