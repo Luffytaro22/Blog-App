@@ -33,7 +33,7 @@
 }
 
 .users,
-.user-container{
+.user-container {
   display: flex;
   justify-content: space-between;
 }
@@ -62,24 +62,27 @@
   width: 680px;
 }
 
+.post-title > p {
+  text-align: end;
+}
+
+.posts-comments > p,
+.comments > p {
+  margin-bottom: 10px;
+}
+
 .user-bio > p,
 .posts > p:first-child {
   margin-bottom: 20px;
   font-weight: bold;
 }
 
-.posts > p:last-child,
-.post-title > p {
+.posts > p:last-child {
   text-align: end;
 }
 
 .post-title {
   margin-bottom: 20px;
-}
-
-.posts-comments > p,
-.comments > p {
-  margin-bottom: 10px;
 }
 
 button:hover {
