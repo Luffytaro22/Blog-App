@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   root to: 'users#index'
   # root "articles#index"
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show, :edit, :new, :create, :update]
-    	resources :comments, only: [:edit, :new, :create, :update]
+    resources :posts, only: [:index, :show, :edit, :new, :create, :update] do
+      resources :comments, only: [:new, :create]
+    end
   end
-
 end
