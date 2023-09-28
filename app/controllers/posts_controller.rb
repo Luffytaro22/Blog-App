@@ -10,4 +10,8 @@ class PostsController < ApplicationController
     @post = @posts[@id.to_i - 1]
     @comments = Comment.where(post_id: @post.id)
   end
+
+  def new
+  	@post_new = Post.new
+  end
 end
