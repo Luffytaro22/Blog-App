@@ -1,4 +1,7 @@
 <div class="users-container">
+	<%= link_to user_path(@user_select), method: :get, class: 'button-posts' do %>
+    <i class="fas fa-arrow-left"></i> Back to User
+  <% end %>
 	<div class="users">
 		<img src="<%= @user_select.photo %>" class="users-photos" />
 		<div class="user-container">
