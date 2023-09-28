@@ -16,6 +16,7 @@
 			</p>
 		</div>
 		<div class="comments">
+			<%= render 'comments/form' %>
 			<% @comments.each do |comment| %>
 				<p>
 					<strong><%= User.find(comment.user_id).name %>:</strong>
