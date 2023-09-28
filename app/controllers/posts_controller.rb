@@ -9,7 +9,9 @@ class PostsController < ApplicationController
     @id = params[:id]
     @user_select = User.find(params[:user_id])
     @posts = Post.where(author_id: @user_select.id)
-    @post = @posts[@id.to_i - 1]
+    @post = Post.find(@id)
+    @next_post = Post.where("id > ? AND author_id = ?", params[:id], @user_select.id).first
+    @previous_post = Post.where("id < ? AND author_id = ?", params[:id], @user_select.id).last
     @comments = Comment.where(post_id: @post.id)
   end
 
