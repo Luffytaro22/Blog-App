@@ -5,10 +5,7 @@ Rails.application.routes.draw do
   root to: 'users#index'
   # root "articles#index"
   resources :users, only: [:index, :show] do
-		resources :posts, only: [:index, :show, :edit]
+    resources :posts, only: [:index, :show, :edit, :new, :create, :update]
   end
 
-	get 'posts/new', to: 'posts#new' # post form.
-	post 'posts', to:'posts#create' # create a post.
-	post 'posts', to: 'posts#update' # update a post.
 end
