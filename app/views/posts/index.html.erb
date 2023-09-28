@@ -1,7 +1,14 @@
 <div class="users-container">
-	<%= link_to user_path(@user_select), method: :get, class: 'button-posts' do %>
-    <i class="fas fa-arrow-left"></i> Back to User
-  <% end %>
+	<div id="posts-bar">
+		<%= link_to user_path(@user_select), method: :get, class: 'button-posts' do %>
+			<i class="fas fa-arrow-left"></i> Back to User
+		<% end %>
+		<% if @user_select.id == @user.id %>
+			<%= link_to new_user_post_path(@user_select), method: :get, class: 'button-posts' do %>
+				Create a new post
+			<% end %>
+		<% end %>
+  </div>
 	<div class="users">
 		<img src="<%= @user_select.photo %>" class="users-photos" />
 		<div class="user-container">
