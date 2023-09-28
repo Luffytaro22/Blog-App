@@ -10,10 +10,18 @@
 		</div>
 	</div>
 	<div class="posts-container">
-		<% @user_select.recent_posts.each do |post| %>
+		<% @posts.each do |post| %>
 			<div class="post-comments">
 				<div class="posts">
-					<p><%= post.title %></p>
+					<p>
+						<%= post.title %>
+						<% if @user_select.id == @user.id %>
+              <%= link_to edit_user_post_path(id: post.id, user_id: post.author_id), method: :get, class: 'button-posts' do %>
+                Edit
+                <i class="fa-solid fa-pen-to-square"></i>
+              <% end %>
+            <% end %>
+					</p>
 					<p><%= post.text.truncate(50) %></p>
 					<p>
 						<span>Comments: <%= post.comments_counter %></span>
