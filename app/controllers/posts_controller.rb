@@ -14,16 +14,16 @@ class PostsController < ApplicationController
   end
 
   def new
-  	@post_new = Post.new
+  	@post = Post.new
   	@user = current_user
   end
 
   def create
-  	@post_new = Post.new(post_params)
+  	@post = Post.new(post_params)
   	@user = current_user
-  	@post_new.author = @user
+  	@post.author = @user
 
-  	if @post_new.save
+  	if @post.save
   		redirect_to user_posts_path(@user)
   	else
   		render :new, status: :unprocessable_entity
@@ -33,6 +33,18 @@ class PostsController < ApplicationController
   def edit
   	@user = current_user
   	@post = Post.find_by(author: @user, id: params[:id])
+  	print @post
+  end
+
+  def update
+  	@user = current_user
+  	@post = Post.find_by(author: @user, id: params[:id])
+
+  	if @post.update(post_params)
+  		redirect_to user_posts_path(@user)
+  	else
+  		render :edit, status: unprocessable_entity
+  	end
   end
 
   private
