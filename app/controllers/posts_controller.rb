@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def index
     @user_select = User.find(params[:user_id])
+    @posts = Post.where(author: @user_select)
+    @user = current_user
   end
 
   def show
