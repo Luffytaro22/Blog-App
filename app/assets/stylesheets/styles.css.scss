@@ -116,6 +116,7 @@ button:hover {
   background-color: orange;
   color: black;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .buttons-container {
@@ -135,4 +136,29 @@ button:hover {
 
 .like {
   color: red;
+}
+
+.posts-form label {
+  font-size: 1.2em;
+}
+
+.posts-form {
+  width: 50%;
+  max-width: 720px;
+}
+
+.posts-form-inputs {
+  background-color: rgba(255,255,255, 0.1);
+  color: white;
+  border: none;
+}
+
+.posts-form-inputs:focus {
+  background-color: rgba(255,255,255, 0.1);
+  outline-style: none;
+  color: white;
+}
+
+.posts-form input[type="submit"] {
+  background-color: black;
 }
