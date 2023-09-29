@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     @user = current_user
     @posts = Post.where(author_id: @user_select.id)
     @post = Post.find(@id)
-    @like = @post.likes.find_by(id: params[:id])
+    @like = Like.find_by(user: @user, post: @post)
     @next_post = Post.where("id > ? AND author_id = ?", params[:id], @user_select.id).first
     @previous_post = Post.where("id < ? AND author_id = ?", params[:id], @user_select.id).last
     @comments = Comment.where(post_id: @post.id)
