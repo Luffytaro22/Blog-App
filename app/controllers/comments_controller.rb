@@ -6,14 +6,14 @@ class CommentsController < ApplicationController
     @comment.user = @user
     @comment.post = @post
     if @comment.save
-    	redirect_to user_post_path(params[:user_id], params[:post_id])
+      redirect_to user_post_path(params[:user_id], params[:post_id])
     else
-			puts @comment.errors.full_messages
+      puts @comment.errors.full_messages
     end
-
   end
 
-	private
+  private
+
   def comment_params
     params.require(:comment).permit(:text)
   end

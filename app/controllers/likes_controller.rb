@@ -3,20 +3,18 @@ class LikesController < ApplicationController
   before_action :find_like, only: [:destroy]
 
   def create
-    if already_liked?
-      return
-    else
-    	@post.likes.create(user_id: current_user.id)
-    end
+    return if already_liked?
+
+    @post.likes.create(user_id: current_user.id)
+
     redirect_to request.referrer
   end
 
   def destroy
-    if !(already_liked?)
-      return
-    else
-      @like.destroy
-    end
+    return unless already_liked?
+
+    @like.destroy
+
     redirect_to request.referrer
   end
 

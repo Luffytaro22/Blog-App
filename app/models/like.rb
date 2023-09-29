@@ -11,7 +11,7 @@ class Like < ApplicationRecord
   end
 
   def decrease_likes_counter
-  	post = Post.find_by(id: post_id)
-  	post.decrement!(:likes_counter)
+    post = Post.find_by(id: post_id)
+    post.decrement!(:likes_counter)
   end
 end

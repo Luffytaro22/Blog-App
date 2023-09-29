@@ -71,7 +71,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'bootstrap', '~> 5.3.1'
+gem 'bootstrap_form', '~> 5.3'
 gem 'font-awesome-sass', '~> 6.4.2'
 gem 'rubocop', '>= 1.0', '< 2.0'
-gem 'bootstrap', '~> 5.3.1'
-gem "bootstrap_form", "~> 5.3"
