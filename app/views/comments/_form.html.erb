@@ -1,4 +1,4 @@
-<%= bootstrap_form_with model: [@user, @post, @comment] do |form| %>
+<%= bootstrap_form_with model: [@post, @post.comments.build], url: user_post_comments_path(@post.author, @post) do |form| %>
 	<%= form.text_area :text, size: "30x3" %>
 	<%= form.submit %>
 <% end %>
