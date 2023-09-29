@@ -6,9 +6,9 @@ class LikesController < ApplicationController
     if already_liked?
       return
     else
-      @post.likes.create(user_id: current_user.id)
+    	@post.likes.create(user_id: current_user.id)
     end
-    redirect_to users_post_path(@user, @post)
+    redirect_to user_post_path(@user, @post)
   end
 
   def destroy
@@ -17,7 +17,7 @@ class LikesController < ApplicationController
     else
       @like.destroy
     end
-    redirect_to users_post_path(@user, @post)
+    redirect_to user_post_path(@user, @post)
   end
 
   private
