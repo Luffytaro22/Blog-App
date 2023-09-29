@@ -21,7 +21,9 @@
 			<div class="post-comments">
 				<div class="posts">
 					<p id="posts-title">
-						<%= post.title %>
+						<%= link_to user_post_path(@user_select, post), method: :get do %>
+							<%= post.title %>
+						<% end %>
 						<% if @user_select.id == @user.id %>
               <%= link_to edit_user_post_path(id: post.id, user_id: post.author_id), method: :get, class: 'button-posts' do %>
                 Edit
