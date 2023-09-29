@@ -1,3 +1,9 @@
-<h1>Edit Post</h1>
-
-<%= render "form" %>
+<div class="users-container">
+	<div id="posts-bar">
+		<%= link_to :back, method: :get, class: 'button-posts' do %>
+				<i class="fas fa-arrow-left"></i> Back to User
+			<% end %>
+		<h1>Edit Post</h1>
+	</div>
+	<%= render "form" %>
+</div>
