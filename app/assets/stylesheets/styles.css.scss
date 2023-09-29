@@ -89,7 +89,8 @@ a {
 }
 
 .posts-comments > p,
-.comments > p {
+.comments > p,
+.comments > form {
   margin-bottom: 10px;
 }
 
@@ -157,6 +158,11 @@ button:hover {
   background-color: rgba(255,255,255, 0.1);
   outline-style: none;
   color: white;
+}
+
+.posts-form-inputs::placeholder {
+  color: whitesmoke;
+  font-style: italic;
 }
 
 .posts-form input[type="submit"] {
