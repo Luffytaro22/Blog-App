@@ -7,12 +7,12 @@
 			<div class="post-title">
 				<h3><%= @post.title %> by <%= User.find(@post.author_id).name %> </h3>
 				<% if @like %>
-					<%= button_to user_post_like_path(@user_select, @post, @like), action: 'destroy', method: :delete, remote: true do %>
-            <i class="fas fa-thumbs-down"></i>
+					<%= button_to user_post_like_path(@user_select, @post, @like), action: 'destroy', method: :delete, remote: true, class: 'buttons-forms' do %>
+           <i class="fa-solid fa-heart like"></i>
            <% end %>
 				<% else %>
-					<%= button_to user_post_likes_path(@user_select, @post), method: :post do %>
-          <i class="fas fa-thumbs-up"></i>
+					<%= button_to user_post_likes_path(@user_select, @post), method: :post, class: 'buttons-forms' do %>
+          <i class="fa-solid fa-heart not-like"></i>
         	<% end %>
 				<% end %>
 				<p>
