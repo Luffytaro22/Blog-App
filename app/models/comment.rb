@@ -1,8 +1,8 @@
 class Comment < ApplicationRecord
   belongs_to :user, class_name: 'User'
   belongs_to :post, class_name: 'Post'
-  after_save :update_comments_counter
-
+  after_create :update_comments_counter
+  validates :text, presence: true
   # Method to update the comments counter for a post.
   def update_comments_counter
     post = Post.find_by(id: post_id)

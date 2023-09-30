@@ -1,7 +1,14 @@
 <div class="users-container">
-	<%= link_to user_path(@user_select), method: :get, class: 'button-posts' do %>
-    <i class="fas fa-arrow-left"></i> Back to User
-  <% end %>
+	<div id="posts-bar">
+		<%= link_to user_path(@user_select), method: :get, class: 'button-posts' do %>
+			<i class="fas fa-arrow-left"></i> Back to User
+		<% end %>
+		<% if @user_select.id == @user.id %>
+			<%= link_to new_user_post_path(@user_select), method: :get, class: 'button-posts' do %>
+				Create a new post
+			<% end %>
+		<% end %>
+  </div>
 	<div class="users">
 		<img src="<%= @user_select.photo %>" class="users-photos" />
 		<div class="user-container">
@@ -10,10 +17,20 @@
 		</div>
 	</div>
 	<div class="posts-container">
-		<% @user_select.recent_posts.each do |post| %>
+		<% @posts.each do |post| %>
 			<div class="post-comments">
 				<div class="posts">
-					<p><%= post.title %></p>
+					<p id="posts-title">
+						<%= link_to user_post_path(@user_select, post), method: :get do %>
+							<%= post.title %>
+						<% end %>
+						<% if @user_select.id == @user.id %>
+              <%= link_to edit_user_post_path(id: post.id, user_id: post.author_id), method: :get, class: 'button-posts' do %>
+                Edit
+                <i class="fa-solid fa-pen-to-square"></i>
+              <% end %>
+            <% end %>
+					</p>
 					<p><%= post.text.truncate(50) %></p>
 					<p>
 						<span>Comments: <%= post.comments_counter %></span>
@@ -32,7 +49,7 @@
 			</div>
 		<% end %>
 	</div>
-	<%= link_to user_post_path(@user_select, 1), method: :get, class: 'button-posts' do %>
+	<%= link_to user_post_path(@user_select, @posts[0]), method: :get, class: 'button-posts' do %>
 		Pagination
 	<% end %>
 </div>

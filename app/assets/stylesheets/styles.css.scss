@@ -1,12 +1,33 @@
 @import "font-awesome";
+@import "bootstrap";
+@import "rails_bootstrap_forms";
 
 * {
   padding: 0;
   margin: 0;
 }
 
+body {
+  background-color: #2e2f30;
+  color: white;
+}
+
+a {
+  color: beige;
+}
+
+#posts-title,
+#posts-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#posts-bar {
+  width: 700px;
+}
+
 .users-name {
-  color: black;
+  color: bisque;
 }
 
 .users-container,
@@ -22,6 +43,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: 2px solid black;
 }
 
 .users-container {
@@ -43,7 +65,7 @@
 }
 
 .user-container {
-  border: 1px solid black;
+  border: 1px solid white;
   width: 70%;
   padding: 10px 30px;
 }
@@ -57,7 +79,7 @@
 .posts-comments,
 .post,
 .comments {
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 5px 10px 10px 10px;
   width: 680px;
 }
@@ -67,7 +89,8 @@
 }
 
 .posts-comments > p,
-.comments > p {
+.comments > p,
+.comments > form {
   margin-bottom: 10px;
 }
 
@@ -94,10 +117,54 @@ button:hover {
   background-color: orange;
   color: black;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .buttons-container {
   display: flex;
   justify-content: space-between;
   width: 700px;
+}
+
+.buttons-forms {
+  background-color: transparent;
+  border: none;
+}
+
+.not-like {
+  color: white;
+}
+
+.like {
+  color: red;
+}
+
+.posts-form label {
+  font-size: 1.2em;
+}
+
+.posts-form {
+  width: 50%;
+  max-width: 720px;
+}
+
+.posts-form-inputs {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+}
+
+.posts-form-inputs:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline-style: none;
+  color: white;
+}
+
+.posts-form-inputs::placeholder {
+  color: whitesmoke;
+  font-style: italic;
+}
+
+.posts-form input[type="submit"] {
+  background-color: black;
 }

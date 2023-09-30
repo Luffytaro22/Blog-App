@@ -1,0 +1,5 @@
+<%= bootstrap_form_with model: [@user, @post], class: 'posts-form' do |form| %>
+	<%= form.text_field :title, class: 'posts-form-inputs' %>
+	<%= form.text_area :text, size: "100x10", class: 'posts-form-inputs' %>
+	<%= form.submit %>
+<% end %>
