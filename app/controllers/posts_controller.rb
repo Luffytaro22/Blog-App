@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user_select = User.find(params[:user_id])
-    @posts = Post.where(author: @user_select)
+    @posts = Post.includes(:author).where(author_id: params[:user_id])
     @user = current_user
   end
 
