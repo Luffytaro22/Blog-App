@@ -23,6 +23,7 @@ class Post < ApplicationRecord
   # Method to return the 5 most recent comments for a post.
   def recent_comments
     Comment
+      .includes(:user)
       .where(post_id: id)
       .order(updated_at: :desc)
       .limit(5)
