@@ -39,7 +39,7 @@
 					</p>
 				</div>
 				<div class="posts-comments">
-					<% post.comments.order(updated_at: :desc).limit(5).each do |comment| %>
+					<% post.comments.includes(:user).order(updated_at: :desc).limit(5).each do |comment| %>
 						<p>
 							<strong><%= comment.user.name %>:</strong>
 							<span> <%= comment.text %> </span>
