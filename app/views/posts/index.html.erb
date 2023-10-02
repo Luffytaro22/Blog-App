@@ -41,7 +41,7 @@
 				<div class="posts-comments">
 					<% post.recent_comments.each do |comment| %>
 						<p>
-							<strong><%= User.find(comment.user_id).name %>:</strong>
+							<strong><%= comment.user.name %>:</strong>
 							<span> <%= comment.text %> </span>
 						</p>
 					<% end %>
