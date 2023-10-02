@@ -28,11 +28,4 @@ class Post < ApplicationRecord
       .order(updated_at: :desc)
       .limit(5)
   end
-
-  def self.with_recent_comments(author_id)
-    includes(:author, :comments)
-      .where(author_id: author_id)
-      .left_outer_joins(:comments)
-      .distinct
-  end
 end
