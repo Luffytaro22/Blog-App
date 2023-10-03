@@ -24,6 +24,32 @@ RSpec.describe 'User', type: :feature do
            expect(page).to have_selector(".users-name", text: user.name)
        end
     end
+
+    it 'shows profile picture for each user' do
+    	visit users_path
+    	[@user1, @user2].each do |user|
+    		expect(page).to have_selector("img[src='#{user.photo}']")
+    	end
+    end
+
+   	it 'shows the number of posts for each user' do
+   		visit users_path
+   		[@user1, @user2].each do |user|
+   			expect(page).to have_selector('.users-posts-counter', text: "Number of posts: #{user.posts_counter}")
+   		end
+   	end
+  end
+
+  context 'User redirections' do
+		it 'redirects to the correct user page when clicking on user name' do
+      [@user1, @user2].each do |user|
+      	visit users_path
+				# Find the username and make a click on it.
+				find('h2.users-name', text: user.name).click
+				# Expect to be redirected to the correct page.
+				expect(page).to have_current_path(user_path(user))
+      end
+    end
   end
   after do
   	User.destroy_all
