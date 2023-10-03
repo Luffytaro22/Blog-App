@@ -103,6 +103,11 @@ rspec
 - GitHub: [@Luffytaro22](https://github.com/Luffytaro22)
 - LinkedIn: [Manuel Sánchez](https://www.linkedin.com/in/manuel-alejandro-sanchez-sierra/)
 
+👤 **lRebornsl**
+
+- GitHub: [@lRebornsl](https://github.com/lRebornsl)
+- Twitter: [@RebornsDev](https://twitter.com/RebornsDev)
+- LinkedIn: [Anthony Vásquez](https://www.linkedin.com/in/avvm98/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

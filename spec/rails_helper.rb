@@ -46,17 +46,17 @@ RSpec.configure do |config|
   # config.use_active_record = false
 
   config.before(:suite) do
-      DatabaseCleaner.strategy = :transaction
-      DatabaseCleaner.clean_with(:truncation)
-    end
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
 
-    config.before(:each) do
-      DatabaseCleaner.start
-    end
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
 
-    config.after(:each) do
-      DatabaseCleaner.clean
-    end
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
@@ -80,13 +80,13 @@ RSpec.configure do |config|
 end
 
 Capybara.register_driver :selenium_chrome do |app|
- options = Selenium::WebDriver::Chrome::Options.new
- options.add_argument('--headless')
- options.add_argument('--disable-dev-shm-usage')
- options.add_argument('--no-sandbox')
- options.add_argument('--remote-debugging-port=9222')
+  options = Selenium::WebDriver::Chrome::Options.new
+  options.add_argument('--headless')
+  options.add_argument('--disable-dev-shm-usage')
+  options.add_argument('--no-sandbox')
+  options.add_argument('--remote-debugging-port=9222')
 
- Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+  Capybara::Selenium::Driver.new(app, browser: :chrome, options:)
 end
 
 Capybara.javascript_driver = :selenium_chrome
