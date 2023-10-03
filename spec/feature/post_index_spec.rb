@@ -86,6 +86,15 @@ RSpec.describe 'Post', type: :feature do
    	end
   end
 
+	context 'User-Post redirections' do
+    it 'redirects to the selected post' do
+    	@posts.each do |post|
+    		visit user_posts_path(@user)
+    		find('a', text: post.title).click
+    		expect(page).to have_current_path(user_post_path(@user, post))
+    	end
+    end
+  end
 
   after do
   	Like.destroy_all
