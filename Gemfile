@@ -70,6 +70,7 @@ group :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver', '4.10.0'
   gem 'webdrivers', '5.2.0'
+  gem 'database_cleaner'
 end
 
 gem 'bootstrap', '~> 5.3.1'
