@@ -41,7 +41,9 @@ RSpec.describe 'User', type: :feature do
       visit user_path(@user)
       expect(page).to have_selector('.user-bio', text: "Bio:\n#{@user.bio}")
     end
+  end
 
+  context 'Posts in User show page' do
     it 'shows the first 3 posts' do
       visit user_path(@user)
       # Select all the elements with 'posts' class.

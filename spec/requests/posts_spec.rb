@@ -1,19 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe 'Post', type: :request do
-	before do
-		@user = User.create(
-          name: 'user1',
-          photo: 'https://i.blogs.es/7650e9/spy-x-family/500_333.jpeg',
-          bio: 'waku-waku'
-        )
+  before do
+    @user = User.create(
+      name: 'user1',
+      photo: 'https://i.blogs.es/7650e9/spy-x-family/500_333.jpeg',
+      bio: 'waku-waku'
+    )
     @post = Post.create(
-    		author: @user,
-    		title: 'New post',
-    		text: 'My new post...'
+      author: @user,
+      title: 'New post',
+      text: 'My new post...'
     )
     @user.reload
-	end
+  end
   describe 'GET /index' do
     it 'returns http success' do
       get "/users/#{@user.id}/posts" # A GET request to /users/:id/posts.
@@ -37,7 +37,7 @@ RSpec.describe 'Post', type: :request do
   end
 
   after do
-  	Post.destroy_all
-  	User.destroy_all
+    Post.destroy_all
+    User.destroy_all
   end
 end

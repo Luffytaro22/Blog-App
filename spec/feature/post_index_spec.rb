@@ -67,7 +67,9 @@ RSpec.describe 'Post', type: :feature do
         end
       end
     end
+  end
 
+  context 'Comments in post index page' do
     it 'shows the first comments on a post' do
       visit user_posts_path(@user)
       posts_comments = all('.posts-comments')
