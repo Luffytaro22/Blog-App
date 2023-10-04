@@ -24,6 +24,7 @@ class Post < ApplicationRecord
   def recent_comments
     Comment
       .where(post_id: id)
+      .includes(:user)
       .order(updated_at: :desc)
       .limit(5)
   end

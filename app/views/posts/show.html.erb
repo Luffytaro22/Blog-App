@@ -28,7 +28,7 @@
 			<%= render 'comments/form' %>
 			<% @comments.each do |comment| %>
 				<p>
-					<strong><%= User.find(comment.user_id).name %>:</strong>
+					<strong><%= comment.user.name %>:</strong>
 					<span><%= comment.text %></span>
 				</p>
 			<% end %>

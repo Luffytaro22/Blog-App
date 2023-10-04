@@ -18,7 +18,9 @@
 	<div class="posts-container">
 		<% @user_select.recent_posts.each do |post| %>
 			<div class="posts">
-				<p><%= post.title %></p>
+				<%= link_to user_post_path(@user_select, post), method: :get do %>
+        	<%= post.title %>
+        <% end %>
 				<p><%= post.text.truncate(50) %></p>
 				<p>
 					<span>Comments: <%= post.comments_counter %></span>
