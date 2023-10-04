@@ -3,6 +3,10 @@
 		<%= link_to users_path, method: :get, class: 'button-posts' do %>
     	<i class="fas fa-arrow-left"></i> Back to Users
   	<% end %>
+  	<%= link_to edit_user_registration_path, method: :get, class: 'button-posts' do %>
+  		<i class="fa-solid fa-pen-to-square"></i>
+       Edit Info
+    <% end %>
   </div>
 	<div class="users">
 		<img src="<%= @user_select.photo %>" class="users-photos" />
