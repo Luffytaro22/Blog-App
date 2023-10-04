@@ -5,20 +5,24 @@
 		<%= render "devise/shared/error_messages", resource: resource %>
 
 		<div class="field">
+			<%= f.label :email %>
 			<%= f.email_field :email, placeholder: 'Email', autofocus: true, autocomplete: "email" %>
 		</div>
 
 		<div class="field">
+			<%= f.label :name %>
 			<%= f.text_field :name, placeholder: 'Username' %>
 		</div>
 
 		<div class="field">
+			<%= f.label :photo %>
 			<%= f.text_field :photo, placeholder: 'Photo link' %>
 		</div>
 
-			<div class="field">
-				<%= f.text_field :bio, placeholder: 'Bio' %>
-			</div>
+		<div class="field">
+			<%= f.label :bio %>
+			<%= f.text_field :bio, placeholder: 'Bio' %>
+		</div>
 
 		<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
 			<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
