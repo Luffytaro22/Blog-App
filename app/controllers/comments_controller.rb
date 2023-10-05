@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def create
     @post = Post.find(params[:post_id])
     @user = current_user
@@ -10,6 +11,12 @@ class CommentsController < ApplicationController
     else
       puts @comment.errors.full_messages
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to user_post_path(params[:user_id], params[:post_id])
   end
 
   private

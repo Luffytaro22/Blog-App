@@ -5,16 +5,18 @@
 	<div>
 		<div class="post">
 			<div class="post-title">
-				<h3><%= @post.title %> by <%= User.find(@post.author_id).name %> </h3>
-				<% if @like %>
-					<%= button_to user_post_like_path(@user_select, @post, @like), action: 'destroy', method: :delete, remote: true, class: 'buttons-forms' do %>
-           <i class="fa-solid fa-heart like"></i>
-           <% end %>
-				<% else %>
-					<%= button_to user_post_likes_path(@user_select, @post), method: :post, class: 'buttons-forms' do %>
-          <i class="fa-solid fa-heart not-like"></i>
-        	<% end %>
-				<% end %>
+				<div class="post-flex">
+					<h3><%= @post.title %> by <%= User.find(@post.author_id).name %> </h3>
+					<% if @like %>
+						<%= button_to user_post_like_path(@user_select, @post, @like), action: 'destroy', method: :delete, remote: true, class: 'button-like' do %>
+						 <i class="fa-solid fa-heart like"></i>
+						 <% end %>
+					<% else %>
+						<%= button_to user_post_likes_path(@user_select, @post), method: :post, class: 'button-like' do %>
+						<i class="fa-solid fa-heart not-like"></i>
+						<% end %>
+					<% end %>
+				</div>
 				<p>
 					<span>Comments: <%= @post.comments_counter %></span>
 					<span>Likes: <%= @post.likes_counter %></span>
@@ -27,10 +29,17 @@
 		<div class="comments">
 			<%= render 'comments/form' %>
 			<% @comments.each do |comment| %>
-				<p>
-					<strong><%= comment.user.name %>:</strong>
-					<span><%= comment.text %></span>
-				</p>
+				<div class="comment-flex">
+					<p>
+						<strong><%= comment.user.name %>:</strong>
+						<span><%= comment.text %></span>
+					</p>
+					<% if can? :destroy, comment %>
+						<%= button_to user_post_comment_path(@user_select, @post, comment), action: 'destroy', data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, remote: true, class: 'button-delete' do %>
+							<i class="fa-solid fa-trash-can"></i>
+						<% end %>
+					<% end %>
+				</div>
 			<% end %>
 		</div>
 	</div>

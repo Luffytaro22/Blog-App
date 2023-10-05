@@ -119,6 +119,7 @@ button:hover {
   color: black;
   text-decoration: none;
   border-radius: 5px;
+  height: 50px;
 }
 
 .buttons-container {
@@ -168,4 +169,29 @@ button.buttons-forms {
 
 .posts-form input[type="submit"] {
   background-color: black;
+}
+
+#comments-form {
+  width: 100%;
+}
+
+.comment-flex {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid gray;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px;
+}
+
+.post-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.button-delete,
+button.button-like {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-size: 1.3em;
 }

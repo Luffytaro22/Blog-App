@@ -3,13 +3,13 @@
 		<%= link_to users_path, method: :get, class: 'button-posts' do %>
     	<i class="fas fa-arrow-left"></i> Back to Users
   	<% end %>
-  	<% if @user_select.id == @user.id %>
+  	<% if can? :edit, @user_select %>
 			<%= link_to edit_user_registration_path, method: :get, class: 'button-posts' do %>
 				<i class="fa-solid fa-pen-to-square"></i>
 				 Edit Info
 			<% end %>
     <% end %>
-    <% if @user_select.id == @user.id %>
+    <% if can? :create, @user_select %>
     	<%= link_to new_user_post_path(@user_select), method: :get, class: 'button-posts' do %>
     		Create a new post
     	<% end %>
@@ -30,7 +30,7 @@
 		<% @user_select.recent_posts.each do |post| %>
 			<div class="posts">
 				<%= link_to user_post_path(@user_select, post), method: :get do %>
-        	<%= post.title %>
+        	<h3><%= post.title %></h3>
         <% end %>
 				<p><%= post.text.truncate(50) %></p>
 				<p>

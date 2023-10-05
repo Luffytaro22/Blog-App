@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
     @user_select = User.find(params[:user_id])
     @posts = Post.where(author_id: params[:user_id])
@@ -48,6 +49,16 @@ class PostsController < ApplicationController
     else
       render :edit, status: unprocessable_entity
     end
+  end
+
+  def destroy
+    @post = Post.find_by(author: params[:user_id], id: params[:id])
+
+    @post.comments&.destroy_all
+    @post.likes&.destroy_all
+    @post&.destroy
+
+    redirect_to request.referrer
   end
 
   private
