@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-	load_and_authorize_resource
+  load_and_authorize_resource
   before_action :find_post
   before_action :find_like, only: [:destroy]
 

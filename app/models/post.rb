@@ -22,7 +22,7 @@ class Post < ApplicationRecord
   end
 
   def decrease_posts_counter
-  	user = User.find_by(id: author_id)
+    user = User.find_by(id: author_id)
     user.decrement!(:posts_counter)
   end
 

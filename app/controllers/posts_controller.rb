@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	load_and_authorize_resource
+  load_and_authorize_resource
   def index
     @user_select = User.find(params[:user_id])
     @posts = Post.where(author_id: params[:user_id])
@@ -54,11 +54,11 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by(author: params[:user_id], id: params[:id])
 
-		@post.comments.destroy_all unless @post.comments.nil?
-		@post.likes.destroy_all unless @post.likes.nil?
-		@post.destroy
+    @post.comments&.destroy_all
+    @post.likes&.destroy_all
+    @post&.destroy
 
-		redirect_to request.referrer
+    redirect_to request.referrer
   end
 
   private
