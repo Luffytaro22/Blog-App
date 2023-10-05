@@ -171,7 +171,27 @@ button.buttons-forms {
   background-color: black;
 }
 
+#comments-form {
+  width: 100%;
+}
+
 .comment-flex {
   display: flex;
   justify-content: space-between;
+  border: 1px solid gray;
+  padding: 10px 20px 10px 10px;
+  border-radius: 10px;
+}
+
+.post-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.button-delete,
+button.button-like {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-size: 1.3em;
 }
