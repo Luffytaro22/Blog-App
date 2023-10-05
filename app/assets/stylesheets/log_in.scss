@@ -25,7 +25,7 @@
 }
 
 .new_user,
-.edit_user{
+.edit_user {
   width: 50%;
   max-width: 720px;
   min-width: 250px;
@@ -35,14 +35,14 @@
   margin-bottom: 50px;
 }
 
-.field input:not([type="checkbox"]) {
-  width: 100%;
-  padding: 5px 10px;
-}
-
 .actions input {
   width: 100%;
   box-shadow: 5px 5px 5px 1px black;
+}
+
+.field input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 5px 10px;
 }
 
 .alert,
