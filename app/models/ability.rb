@@ -7,10 +7,10 @@ class Ability
     # Define abilities for the user here. For example:
     can :read, :all # All users can read posts, comments.
     return unless user.present?
-    can :manage, User, user_id: current_user.id # Only the logged user can manage their own user.
-    can :manage, Post, user_id: current_user.id # Only the logged user can manage their own posts.
-    can :manage, Comment, user_id: current_user.id # Only the logged user can manage their own comments.
-    can :manage, Like, user_id: current_user.id # Only the logged user can manage their own likes.
+    can :manage, User, id: user.id # Only the logged user can manage their own user.
+    can :manage, Post, author_id: user.id # Only the logged user can manage their own posts.
+    can :manage, Comment, user_id: user.id # Only the logged user can manage their own comments.
+    can :manage, Like, user_id: user.id # Only the logged user can manage their own likes.
     return unless user.role == 'admin'
     can :destroy, Post
     can :destroy, Comment
