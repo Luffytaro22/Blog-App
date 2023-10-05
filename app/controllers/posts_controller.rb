@@ -50,6 +50,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+  	@user = current_user
+    @post = Post.find_by(author: @user, id: params[:id])
+
+		@post.comments.destroy_all
+		@post.likes.destroy_all
+		@post.destroy
+
+		redirect_to request.referrer
+  end
+
   private
 
   def post_params
