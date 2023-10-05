@@ -27,10 +27,18 @@
 		<div class="comments">
 			<%= render 'comments/form' %>
 			<% @comments.each do |comment| %>
-				<p>
-					<strong><%= comment.user.name %>:</strong>
-					<span><%= comment.text %></span>
-				</p>
+				<div class="comment-flex">
+					<p>
+						<strong><%= comment.user.name %>:</strong>
+						<span><%= comment.text %></span>
+					</p>
+					<% if can? :destroy, comment %>
+						<%= button_to user_post_comment_path(@user_select, @post, comment), action: 'destroy', data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, remote: true, class: 'button-posts' do %>
+							<i class="fa-solid fa-trash-can"></i>
+							Delete
+						<% end %>
+					<% end %>
+				</div>
 			<% end %>
 		</div>
 	</div>

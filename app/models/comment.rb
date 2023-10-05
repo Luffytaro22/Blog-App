@@ -8,4 +8,9 @@ class Comment < ApplicationRecord
     post = Post.find_by(id: post_id)
     post.increment!(:comments_counter)
   end
+
+  def decrease_comments_counter
+    post = Post.find_by(id: post_id)
+    post.decrement!(:comments_counter)
+  end
 end
