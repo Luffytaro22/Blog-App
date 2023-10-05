@@ -1,4 +1,8 @@
 <div class="users-container">
+	<%= button_to destroy_user_session_path, method: :delete, class: 'button-posts' do %>
+    Log Out
+    <i class="fa-solid fa-right-from-bracket"></i>
+  <% end %>
 	<% @users.each do |user| %>
 		<div class="users">
 			<img src="<%= user.photo %>" class="users-photos" />

@@ -1,6 +1,7 @@
 @import "font-awesome";
 @import "bootstrap";
 @import "rails_bootstrap_forms";
+@import "log_in";
 
 * {
   padding: 0;
@@ -126,7 +127,7 @@ button:hover {
   width: 700px;
 }
 
-.buttons-forms {
+button.buttons-forms {
   background-color: transparent;
   border: none;
 }

@@ -1,0 +1,61 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.registration a {
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px gray;
+  text-decoration: none;
+}
+
+.button_to button {
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px gray;
+}
+
+.button_to {
+  margin-bottom: 30px;
+}
+
+.new_user,
+.edit_user {
+  width: 50%;
+  max-width: 720px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.actions input {
+  width: 100%;
+  box-shadow: 5px 5px 5px 1px black;
+}
+
+.field input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.alert,
+.notice {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.notice {
+  background-color: green;
+}
+
+.alert {
+  background-color: red;
+}

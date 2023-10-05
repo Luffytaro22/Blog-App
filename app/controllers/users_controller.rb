@@ -5,5 +5,6 @@ class UsersController < ApplicationController
 
   def show
     @user_select = User.find(params[:id])
+    @user = current_user
   end
 end
