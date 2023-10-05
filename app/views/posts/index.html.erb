@@ -20,7 +20,7 @@
 		<% @posts.each do |post| %>
 			<div class="post-comments">
 				<div class="posts">
-					<p id="posts-title">
+					<div id="posts-title">
 						<%= link_to user_post_path(@user_select, post), method: :get do %>
 							<%= post.title %>
 						<% end %>
@@ -30,7 +30,13 @@
                 <i class="fa-solid fa-pen-to-square"></i>
               <% end %>
             <% end %>
-					</p>
+            <% if @user_select.id == @user.id %>
+            	<%= button_to user_post_path(@user_select, post), action: 'destroy', method: :delete, remote: true, data: { confirm: 'Are you sure?' }, class: 'button-posts' do %>
+               	<i class="fa-solid fa-trash-can"></i>
+               	Delete
+              <% end %>
+            <% end %>
+					</div>
 					<p><%= post.text.truncate(50) %></p>
 					<p>
 						<span>Comments: <%= post.comments_counter %></span>
@@ -49,7 +55,9 @@
 			</div>
 		<% end %>
 	</div>
-	<%= link_to user_post_path(@user_select, @posts[0]), method: :get, class: 'button-posts' do %>
-		Pagination
+	<% unless @posts.empty? %>
+		<%= link_to user_post_path(@user_select, @posts[0]), method: :get, class: 'button-posts' do %>
+			Pagination
+		<% end %>
 	<% end %>
 </div>
