@@ -8,23 +8,23 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
-      json_request = JSON.parse(request.body.read)
-      text = json_request['text']
-      author = @post.author
+    json_request = JSON.parse(request.body.read)
+    text = json_request['text']
+    author = @post.author
 
-      @comment = @post.comments.new(text:, author:)
-      if @comment.save
-        render json: @comment
-      else
-        render json: { error: 'Invalid comment' }, status: :unprocessable_entity
-      end
+    @comment = @post.comments.new(text:, author:)
+    if @comment.save
+      render json: @comment
+    else
+      render json: { error: 'Invalid comment' }, status: :unprocessable_entity
+    end
   end
 
-    private
+  private
 
-    def comment_params
-      params.require(:comment).permit(:text)
-    end
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
 
   def set_post
     @post = Post.find(params[:post_id])
