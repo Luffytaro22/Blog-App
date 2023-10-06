@@ -38,8 +38,22 @@ The information is saved in a PostgreSQL database with these tables:
 
 ### Tech Stack
 
-* Ruby on Rails.
-* PostgreSQL.
+<details>
+  <summary>Back-end</summary>
+  <ul>
+    <li><a href="https://guides.rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://www.postgresql.org/docs/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Front-end</summary>
+  <ul>
+    <li><a href="https://www.w3schools.com/html/">HTML5</a></li>
+    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+    <li><a href="https://www.rubyguides.com/2018/11/ruby-erb-haml-slim/">ERB template</a></li>
+  </ul>
+</details>
 
 <!-- Features -->
 
@@ -47,6 +61,10 @@ The information is saved in a PostgreSQL database with these tables:
 * Use of Rails framework.
 * MVC architecture.
 * Save and retrieve information from a PostgreSQL database.
+* Devise gem.
+* Capybara tests with RSpec.
+* CanCanCan gem.
+* RESTful API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,6 +102,10 @@ To install all the ruby gems, use the following command:
 ```
 bundle install
 ```
+After installing the gems, run this commando to create and migrate a database:
+```
+rails db:create db:migrate
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Run tests
@@ -114,8 +136,9 @@ rspec
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a id="future-features"></a>
-- [ ] **Interactive UI.**
-- [ ] **Let the user Log in, make posts, comments and likes.**
+- [ ] **Integrate a Front-end framework.**
+- [ ] **Improve UX and UI.**
+- [ ] **Let the users follow each other.**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
