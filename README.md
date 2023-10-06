@@ -95,7 +95,7 @@ To open a local server, type the following command:
 ```
 rails server
 ```
-To se the API's documentation, open the local server and go to:
+To ses the API's documentation, open the local server and go to:
 ```
 /api-docs
 ```
