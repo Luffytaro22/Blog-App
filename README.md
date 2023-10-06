@@ -64,6 +64,7 @@ The information is saved in a PostgreSQL database with these tables:
 * Devise gem.
 * Capybara tests with RSpec.
 * CanCanCan gem.
+* Rswag gem and API documentation.
 * RESTful API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -94,7 +95,10 @@ To open a local server, type the following command:
 ```
 rails server
 ```
-
+To se the API's documentation, open the local server and go to:
+```
+/api-docs
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install
