@@ -85,6 +85,8 @@ test:
 #
 production:
   <<: *default
-  database: blogapp_production
-  username: blogapp
+  database: <%= ENV["BLOGAPP_DATABASE_NAME"] %>
+  username: <%= ENV["BLOGAPP_DATABASE_USERNAME"] %>
   password: <%= ENV["BLOGAPP_DATABASE_PASSWORD"] %>
+  host: <%= ENV["BLOGAPP_DATABASE_HOST"] %>
+  port: <%= ENV["BLOGAPP_DATABASE_PORT"] %>
