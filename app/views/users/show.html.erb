@@ -3,17 +3,19 @@
 		<%= link_to users_path, method: :get, class: 'button-posts' do %>
     	<i class="fas fa-arrow-left"></i> Back to Users
   	<% end %>
-  	<% if can? :edit, @user_select %>
-			<%= link_to edit_user_registration_path, method: :get, class: 'button-posts' do %>
-				<i class="fa-solid fa-pen-to-square"></i>
-				 Edit Info
-			<% end %>
-    <% end %>
-    <% if can? :create, @user_select %>
-    	<%= link_to new_user_post_path(@user_select), method: :get, class: 'button-posts' do %>
-    		Create a new post
-    	<% end %>
-   	<% end %>
+  	<div id="edit-create-post">
+			<% if can? :edit, @user_select %>
+						<%= link_to edit_user_registration_path, method: :get, class: 'button-posts' do %>
+							<i class="fa-solid fa-pen-to-square"></i>
+							 Edit Info
+						<% end %>
+					<% end %>
+					<% if can? :create, @user_select %>
+						<%= link_to new_user_post_path(@user_select), method: :get, class: 'button-posts' do %>
+							Create a new post
+						<% end %>
+					<% end %>
+		</div>
   </div>
 	<div class="users">
 		<img src="<%= @user_select.photo %>" class="users-photos" />
