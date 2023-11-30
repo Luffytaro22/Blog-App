@@ -42,6 +42,7 @@ a {
 
 .users-name {
   color: bisque;
+  text-align: end;
 }
 
 .users-container,
@@ -54,10 +55,14 @@ a {
 }
 
 .users-photos {
+  object-fit: cover;
   width: 100px;
   height: auto;
   border-radius: 50%;
   border: 2px solid white;
+  position: relative;
+  left: 5%;
+  z-index: 10;
 }
 
 .users-container {
@@ -78,17 +83,20 @@ a {
 
 .users {
   width: 100%;
-  max-width: 40rem;
+  max-width: 30rem;
   justify-content: space-evenly;
-  gap: 0.5rem;
 }
 
 .user-container {
   flex-direction: column;
   border: 2px solid white;
   width: 70%;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+  right: 5%;
 }
 
 .user-container > p {

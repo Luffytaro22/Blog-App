@@ -8,7 +8,7 @@
 			<img src="<%= user.photo %>" class="users-photos" />
 			<div class="user-container">
 				<%= link_to user_path(user.id), method: :get do %>
-					<h2 class="users-name"><%= user.name %></h2>
+					<p class="users-name"><%= user.name %></p>
 				<% end %>
 				<p class="users-posts-counter">Number of posts: <%= user.posts_counter %></p>
 			</div>
