@@ -7,13 +7,10 @@
 
 .button_to button {
   background-color: red;
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 5px 5px gray;
-}
-
-.button_to {
-  margin-bottom: 30px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
 }
 
 .new_user,
