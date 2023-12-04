@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "rails_bootstrap_forms";
 @import "log_in";
+@import "side_menu";
 
 * {
   padding: 0;
@@ -57,7 +58,6 @@ a {
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  margin-top: 50px;
 }
 
 .users-photos {
