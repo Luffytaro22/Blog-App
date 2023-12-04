@@ -1,0 +1,13 @@
+<div class="side-menu hide">
+	<i class="fa-solid fa-x", style="font-size: 1.6em;", onclick="document.querySelector('.side-menu').style.display = 'none'"></i>
+	<div class="flex-column">
+		<div style="text-align: center;">
+			<img class="users-photos", style="height: 100px;" src=<%= @user.photo %> />
+			<p class="login-title", style="font-size: 1.3em;"><%= @user.name %></p>
+		</div>
+		<%= button_to destroy_user_session_path, method: :delete, class: 'button-posts' do %>
+      Log Out
+      <i class="fa-solid fa-right-from-bracket"></i>
+    <% end %>
+	</div>
+</div>
