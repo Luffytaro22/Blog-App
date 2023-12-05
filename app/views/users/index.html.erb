@@ -1,7 +1,7 @@
 <div class="users-container">
 	<%= render 'side_menu' %>
 	<div style="width: 100%;">
-		<i class="fa-solid fa-bars", style="font-size: 1.6em;", onclick="document.querySelector('.side-menu').style.display = 'block'"></i>
+		<i class="fa-solid fa-bars", style="font-size: 1.6em; position: fixed;", onclick="document.querySelector('.side-menu').style.display = 'block'"></i>
 	</div>
 	<% @users.each do |user| %>
 		<div class="users">
