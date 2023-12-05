@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 @import "font-awesome";
 @import "bootstrap";
 @import "rails_bootstrap_forms";
@@ -7,15 +9,21 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Hedvig Letters Sans', sans-serif;
 }
 
 body {
-  background-color: #2e2f30;
+  background: linear-gradient(45deg, rgb(11, 58, 111), rgba(55, 120, 194, 0.7));
+  min-height: 100vh;
   color: white;
 }
 
 a {
   color: beige;
+}
+
+h1 {
+  font-family: 'Ephesis', cursive;
 }
 
 #posts-title,
