@@ -44,7 +44,8 @@
   width: 100%;
   padding: 10px 0;
   position: fixed;
-  bottom: -15px;
+  bottom: -16px;
+  z-index: 50;
 }
 
 .notice {
