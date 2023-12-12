@@ -24,6 +24,8 @@ a {
 
 h1 {
   font-family: 'Ephesis', cursive;
+  text-align: center;
+  font-size: 3rem;
 }
 
 #posts-title,
@@ -245,6 +247,6 @@ button.button-like {
 }
 
 .post-comments {
-  width: 100%;
+  width: 90%;
   max-width: 40rem;
 }

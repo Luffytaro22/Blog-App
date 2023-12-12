@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 5%;
   margin-bottom: 5%;
+  min-height: 100vh;
 }
 
 .button_to button {
