@@ -79,7 +79,7 @@ The information is saved in a PostgreSQL database with these tables:
 
 <!-- Live Demo -->
 ### 🚀 Live Demo <a id="live-demo"></a>
-[Live Demo](https://sky-blog-a2e76c0e5e5c.herokuapp.com/)
+[Live Demo](https://blog-app-efud.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
